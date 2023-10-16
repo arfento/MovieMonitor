@@ -17,13 +17,14 @@ android {
 
     defaultConfig {
         applicationId = "com.pinto.moviemonitor"
-        minSdk = 24
+        minSdk = 26
         targetSdk = 33
         versionCode = 1
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
+
 
     buildTypes {
         release {
@@ -47,6 +48,10 @@ android {
     buildFeatures {
         buildConfig = true
         viewBinding = true
+    }
+    hilt {
+        enableAggregatingTask = true
+        enableTransformForLocalTests = true
     }
 }
 
